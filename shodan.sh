@@ -1,5 +1,9 @@
 #!/bin/bash
-
+#This script aims to export IPs from saved Shodan result pages
+#By default, you may want to save Shodan page(s) (e.g:https://www.shodan.io/search?query=IP+camera") 
+#to /home/user/Downloads by with Firefox, run this script, and the result should appear in /home/user/shodan-ip
+#Export path and Download can be changed by your own
+#===================================
 func_host_print()
 #Sequentially export hosts from filename on each line
 {
@@ -63,10 +67,4 @@ change_name
 ls -p $shodan_path$folder | grep -v / |grep Shodan_Search > $shodan_path$folder/shodan-file-list
 
 func_init_host
-#####################
-#IP
-#Port
-#country
-#hostname
-#isp
 
